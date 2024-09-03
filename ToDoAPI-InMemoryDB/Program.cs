@@ -9,7 +9,7 @@ namespace ToDoAPI_InMemoryDB
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddDbContext<TodoContext>(opt =>opt.UseInMemoryDatabase("TodoList"));
+            builder.Services.AddDbContext<TodoContext>(opt =>opt.UseInMemoryDatabase("TodoListDB"));
             // Add services to the container.
 
             // Enable CORS

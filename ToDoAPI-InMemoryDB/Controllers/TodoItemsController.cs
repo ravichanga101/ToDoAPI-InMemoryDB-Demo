@@ -55,8 +55,8 @@ namespace ToDoAPI_InMemoryDB.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(todoItem).State = EntityState.Modified;
-
+          //  _context.Entry(todoItem).State = EntityState.Modified;
+          _context.TodoItems.Update(todoItem);
             try
             {
                 await _context.SaveChangesAsync();
